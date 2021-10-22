@@ -1,0 +1,43 @@
+.mainContainer {
+  position: relative;
+  width: 1120px;
+  background-color: black;
+  margin: 0 auto;
+}
+.validation {
+  position: absolute;
+  top: 200px;
+  right: 50px;
+  text-align: center;
+  color: #c9184a;
+  line-height: 60px;
+}
+.titleSeu {
+  color: #48bfe3;
+}
+.titleCPF {
+  color: #f9c74f;
+}
+.validation input {
+  background-color: aliceblue;
+  width: 200px;
+  height: 40px;
+  border-radius: 10px;
+  border: solid 3px #aa333d;
+  padding-left: 10px;
+
+  outline: none;
+
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.validation input:hover {
+  outline: none;
+}
+.messageValid {
+  color: #affc41;
+}
+.messageInvalid {
+  color: #c9184a;
+}
