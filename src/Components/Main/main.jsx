@@ -2,7 +2,7 @@ import { useState } from "react"
 import { CPF } from "../../Services/validatorCPF"
 import "./styles.css"
 export function Main() {
-  const [cpfRaw, setCpfRaw] = useState();
+  const [cpfRaw, setCpfRaw] = useState("");
 
   const { status } = new CPF(cpfRaw).verifyCPF()
 
@@ -16,18 +16,25 @@ export function Main() {
             <span className="titleSeu">Seu</span>
             <br /> <span className="titleCPF">CPF</span>
           </h1>
-          <input type="text" name="" id="" onChange={(e) => {
+          <input type="text" placeholder="Digite seu cpf..." onChange={(e) => {
             setCpfRaw(e.target.value)
           }} />
 
           {
-            status ? (
+            status === true ? (
               <>
                 <p className="messageValid">CPF VALIDO!</p>
               </>
-            ) : (
+            ) : status === false ? (
               <>
                 <p className="messageInvalid">CPF INVALIDO!</p>
+              </>
+            ) : status === "notValue" ? (
+              <>
+                <p></p>
+              </>
+            ) : (
+              <>
               </>
             )
           }

@@ -3,6 +3,12 @@ function CPF(cpf) {
 }
 
 CPF.prototype.verifyCPF = function () {
+  if (this.cpf === "") {
+    return {
+      status: "notValue",
+    };
+  }
+
   //Calc
   const cpf = String(this.cpf);
 
